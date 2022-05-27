@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('course_student', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id')->unsigned();
-            $table->integer('product_id')->unsigned();
+            $table->integer('course_id')->unsigned();
+            $table->integer('student_id')->unsigned();
         });
     }
 
