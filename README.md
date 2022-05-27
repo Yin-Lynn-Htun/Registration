@@ -32,8 +32,6 @@ GET api/students
 POST api/student/store
 ```
 
-```
-
 ## App Info
 
 ### Author
