@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #93c4ff;
+}
+
+@layer components {
+    .input-item {
+        @apply flex gap-2 items-center;
+    }
+
+    .input {
+        @apply border-b-2 outline-none border-gray-700 bg-transparent text-gray-600;
+    }
+
+    .error-msg {
+        @apply text-sm text-red-500;
+    }
+}
