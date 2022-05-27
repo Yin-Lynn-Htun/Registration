@@ -21775,7 +21775,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   validations: function validations() {
     return {
       name: {
-        required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required
+        required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+        maxLengthValue: (0,_vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.maxLength)(30)
       },
       email: {
         required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required,
@@ -21785,7 +21786,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required
       },
       nrc: {
-        required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required
+        required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+        maxLengthValue: (0,_vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.maxLength)(30)
       },
       course: {
         required: _vuelidate_validators__WEBPACK_IMPORTED_MODULE_2__.required
@@ -22327,7 +22329,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[11] || (_cache[11] = function () {
       return $options.register && $options.register.apply($options, arguments);
     }),
-    "class": "bg-blue-500 text-white px-8 py-3 rounded-md"
+    "class": "hover:brightness-125 bg-blue-500 text-white px-8 py-3 rounded-md"
   }, " Submit ")], 32
   /* HYDRATE_EVENTS */
   );
@@ -22349,7 +22351,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "h-screen w-full grid place-items-center fixed top-0 left-0"
+  "class": "h-screen w-screen grid place-items-center fixed top-0 left-0"
 };
 var _hoisted_2 = {
   "class": "bg-white p-5 rounded-md z-10 relative"
@@ -22399,14 +22401,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  key: 1,
+  "class": "bg-gray-100 border-b"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+  colspan: "100%"
+}, "Register a student to appear in the table.", -1
+/* HOISTED */
+);
+
+var _hoisted_3 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_TableRow = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TableRow");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableRow, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", null, [$props.students.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_TableRow, {
+    key: 0,
     students: $props.students
   }, null, 8
   /* PROPS */
-  , ["students"])]);
+  , ["students"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), !$props.students.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_1, _hoisted_3)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
@@ -22498,28 +22513,20 @@ var _hoisted_1 = {
   "class": "flex flex-col"
 };
 var _hoisted_2 = {
-  "class": "overflow-x-auto sm:-mx-6 lg:-mx-8 text-black"
+  "class": "sm:-mx-6 lg:-mx-8 text-black max-w-full"
 };
 var _hoisted_3 = {
-  "class": "py-2 inline-block min-w-full sm:px-6 lg:px-8"
-};
-var _hoisted_4 = {
-  "class": "overflow-hidden"
+  "class": "py-2 inline-block sm:px-6 lg:px-8"
 };
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-2xl font-bold text-center mt-10"
 }, " All Students ", -1
 /* HOISTED */
 );
 
-var _hoisted_6 = {
-  key: 0,
-  "class": "text-center"
-};
-var _hoisted_7 = {
-  key: 1,
-  "class": "min-w-full rounded-md overflow-hidden"
+var _hoisted_5 = {
+  "class": "rounded-md overflow-hidden"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_StudentRegisterModal = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StudentRegisterModal");
@@ -22536,16 +22543,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     closeModal: $options.closeModal
   }, null, 8
   /* PROPS */
-  , ["closeModal"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  , ["closeModal"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[1] || (_cache[1] = function () {
       return $options.openModal && $options.openModal.apply($options, arguments);
     }),
-    "class": "block cursor-pointer w-max px-4 py-2 bg-[#EBE9E5] font-semibold rounded-md mt-5 mb-10"
-  }, " Register new student "), !this.students.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_6, " Loading... ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), this.students.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("table", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableHeader), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableBody, {
+    "class": "hover:bg-black hover:text-white block cursor-pointer mx-auto w-max px-4 py-2 bg-[#EBE9E5] font-semibold rounded-md mt-5 mb-10"
+  }, " Register new student "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableHeader), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableBody, {
     students: _ctx.students
   }, null, 8
   /* PROPS */
-  , ["students"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]);
+  , ["students"])])])])]);
 }
 
 /***/ }),

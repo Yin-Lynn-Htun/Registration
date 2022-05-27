@@ -17,7 +17,7 @@
                     Register new student
                 </button>
 
-                <table class="rounded-md">
+                <table class="rounded-md overflow-hidden">
                     <TableHeader />
                     <TableBody :students="students" />
                 </table>
