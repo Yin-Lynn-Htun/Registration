@@ -1,6 +1,9 @@
 <template>
     <tbody>
-        <TableRow :students="students" />
+        <TableRow v-if="students.length" :students="students" />
+        <tr v-if="!students.length" class="bg-gray-100 border-b">
+            <td colspan="100%">Register a student to appear in the table.</td>
+        </tr>
     </tbody>
 </template>
 

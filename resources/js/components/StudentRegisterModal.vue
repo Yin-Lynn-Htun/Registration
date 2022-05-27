@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-full grid place-items-center fixed top-0 left-0">
+    <div class="h-screen w-screen grid place-items-center fixed top-0 left-0">
         <div class="bg-white p-5 rounded-md z-10 relative">
             <div
                 @click="closeModal"

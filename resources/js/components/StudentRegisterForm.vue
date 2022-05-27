@@ -156,7 +156,7 @@
         </div>
         <button
             @click="register"
-            class="bg-blue-500 text-white px-8 py-3 rounded-md"
+            class="hover:brightness-125 bg-blue-500 text-white px-8 py-3 rounded-md"
         >
             Submit
         </button>
@@ -166,7 +166,7 @@
 <script>
 import axios from "axios";
 import useVuelidate from "@vuelidate/core";
-import { required, email } from "@vuelidate/validators";
+import { required, email, maxLength } from "@vuelidate/validators";
 
 export default {
     name: "StudentRegisterForm",
@@ -187,10 +187,10 @@ export default {
     props: ["closeModal"],
     validations() {
         return {
-            name: { required },
+            name: { required, maxLengthValue: maxLength(30) },
             email: { required, email },
             dob: { required },
-            nrc: { required },
+            nrc: { required, maxLengthValue: maxLength(30) },
             course: {
                 required,
             },
