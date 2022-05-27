@@ -8,6 +8,12 @@ body {
     background-color: #93c4ff;
 }
 
+.gradient-text {
+    background: -webkit-linear-gradient(#eee, #02ff9b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @layer components {
     .input-item {
         @apply flex gap-2 items-center;
