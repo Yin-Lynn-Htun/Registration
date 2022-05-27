@@ -21802,10 +21802,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                _context.prev = 0;
+                _context.next = 3;
                 return _this.v$.$validate();
 
-              case 2:
+              case 3:
                 result = _context.sent;
 
                 if (result) {
@@ -21813,10 +21814,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   break;
                 }
 
-                console.log("first");
                 return _context.abrupt("return");
 
               case 6:
+                _context.next = 11;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+                console.log("Something went wrong!");
+
+              case 11:
                 axios__WEBPACK_IMPORTED_MODULE_0___default().post("api/student/store", {
                   student: {
                     name: _this.name,
@@ -21826,8 +21835,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     course: _this.course
                   }
                 }).then(function (response) {
-                  console.log(response);
-
                   if (response.status === 201) {
                     _this.$emit("fetchAgain");
 
@@ -21836,14 +21843,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 })["catch"](function (error) {
                   console.log(error);
                 });
-                console.log(_this.student);
 
-              case 8:
+              case 12:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee);
+        }, _callee, null, [[0, 8]]);
       }))();
     }
   }

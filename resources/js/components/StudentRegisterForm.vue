@@ -198,10 +198,13 @@ export default {
     },
     methods: {
         async register() {
-            const result = await this.v$.$validate();
-            if (!result) {
-                console.log("first");
-                return;
+            try {
+                const result = await this.v$.$validate();
+                if (!result) {
+                    return;
+                }
+            } catch {
+                console.log("Something went wrong!");
             }
 
             axios
@@ -215,7 +218,6 @@ export default {
                     },
                 })
                 .then((response) => {
-                    console.log(response);
                     if (response.status === 201) {
                         this.$emit("fetchAgain");
                         this.closeModal();
@@ -224,7 +226,6 @@ export default {
                 .catch(function (error) {
                     console.log(error);
                 });
-            console.log(this.student);
         },
     },
 };
