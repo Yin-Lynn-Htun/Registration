@@ -5,8 +5,14 @@
 ## Quick Start
 
 ```bash
+
 # Install Dependencies
 composer install
+npm install
+
+# Create .env file just like .env.example and configure as you want such as DB_DATABASE
+
+# Create a database with the same as DA_DATABASE
 
 # Run Migrations
 php artisan migrate
@@ -15,6 +21,9 @@ php artisan migrate
 php artisan db:seed
 
 # Add virtual host if using Apache
+
+# Run your development server
+php artisan serve
 
 ```
 
