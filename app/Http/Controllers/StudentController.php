@@ -29,14 +29,4 @@ class StudentController extends Controller
 
         return $student;
     }
-
-    // public function destory($id) {
-    //     $existingItem = Student::find($id);
-
-    //     if($existingItem) {
-    //         $existingItem->delete();
-    //         return "Item successfully deleted.";
-    //     }
-    //     return "No item found.";
-    // }
 }
