@@ -17,7 +17,13 @@
                     >
                         Register new student
                     </button>
-                    <table class="min-w-full rounded-md overflow-hidden">
+                    <p class="text-center" v-if="!this.students.length">
+                        Loading...
+                    </p>
+                    <table
+                        v-if="this.students.length"
+                        class="min-w-full rounded-md overflow-hidden"
+                    >
                         <TableHeader />
                         <TableBody :students="students" />
                     </table>

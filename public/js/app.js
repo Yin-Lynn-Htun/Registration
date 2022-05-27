@@ -22508,6 +22508,11 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_6 = {
+  key: 0,
+  "class": "text-center"
+};
+var _hoisted_7 = {
+  key: 1,
   "class": "min-w-full rounded-md overflow-hidden"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -22530,11 +22535,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.openModal && $options.openModal.apply($options, arguments);
     }),
     "class": "block cursor-pointer w-max px-4 py-2 bg-[#EBE9E5] font-semibold rounded-md mt-5 mb-10"
-  }, " Register new student "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableHeader), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableBody, {
+  }, " Register new student "), !this.students.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_6, " Loading... ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), this.students.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("table", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableHeader), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TableBody, {
     students: _ctx.students
   }, null, 8
   /* PROPS */
-  , ["students"])])])])])]);
+  , ["students"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]);
 }
 
 /***/ }),
