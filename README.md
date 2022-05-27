@@ -1,6 +1,6 @@
-# API with Laravel
+# Student Registration Website with Laravel and Vue
 
-> Laravel 9.14.1 API that uses the API resources. This is an API for an student registration app
+> Laravel 9.14.1 API that uses the API resources. Vue 3 for the frontend development.
 
 ## Quick Start
 
